@@ -159,7 +159,7 @@ class Calibrate(Node):
             rad = deg_to_rad(90)
             #create tf between the tag and the rotated frame
             self.rot.header.stamp = self.get_clock().now().to_msg()
-            self.rot.header.frame_id = self.frame_ee
+            self.rot.header.frame_id = self.frame_tag
             self.rot.child_frame_id = self.frame_rotate
             self.rot.transform.translation.x = 0.0
             self.rot.transform.translation.y = 0.0

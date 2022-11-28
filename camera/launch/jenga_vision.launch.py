@@ -47,7 +47,8 @@ def generate_launch_description():
     cv_node = Node(
         package='camera',
         executable='cam',
-        output='screen'
+        output='screen',
+        condition=LaunchConfigurationEquals('calibrate', 'false')
     )
 
     tf_broad_node = Node(
